@@ -1,0 +1,708 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+:root{
+    --main-color:#b89865;
+}
+h3{
+    font-size: 2.7rem;
+    font-family: 'Spline Sans', sans-serif;
+}
+h4{
+    font-size: 1.1rem;
+    font-family: sans-serif;
+    color: white;
+    padding-bottom: 15px;
+    /* margin-top: 1.5rem; */
+}
+h5{
+    font-size: 0.9rem;
+    font-family: sans-serif;
+    color: #c3c3c3;
+    transition: 0.3s ease;
+    padding: 3px;
+}
+hr{
+    width: 25%;
+    border-bottom: #e4dddd;
+    margin-top: 20px;
+    margin-left: 101px;
+}
+nav{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px 0px 50px;
+    position: fixed;
+    background: white;
+    z-index: 9;
+}
+nav .logo{
+    font-size: 4rem;
+    color: black;
+    font-weight: 600;
+    font-family: 'The Nautigal', cursive;
+}
+.logo span{
+    color: var(--main-color);
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+    margin:  0 5px;
+    position: relative;
+    z-index: 9;
+}
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 8px 25px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.active{
+    color: var(--main-color);
+}
+nav ul li a:hover{
+    color:var(--main-color);
+    transition: 0.3s ease;
+
+}
+nav .menu-btn i{
+    color: black;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+#click{
+    display: none;  
+}
+@media (max-width:1185px) {
+    nav .menu-btn i{
+        display: block;
+        position: relative;
+        z-index: 9;
+    }
+    #click:checked ~ .menu-btn i:before{
+        content: "\f00d";
+    }
+    nav ul{
+        position:fixed;
+        top: 80px;
+        left:-100%;
+        background: var(--main-color);
+        height: 500px;
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    #click:checked ~ ul{
+        left: 0%;
+    }
+    nav ul li{
+        margin: 40px 0;
+    }
+    nav ul li a{
+        font-size: 20px;
+        display: block;
+    }
+    nav ul li a.active,
+    nav ul li a:hover{
+        color:white;
+        background: none;
+    }
+}
+/* home page styling */
+.home{
+    height: 580px;
+    width: 100%;
+    background: url("assets/home-image.png")no-repeat center center/cover;
+    position: relative;
+}
+.home-text{
+    margin-top: 14rem;
+    margin-left: 4rem;
+    position: absolute;
+}
+.home-para{
+    width: 56%;
+    text-align: center;
+    font-size: 1.2em;
+}
+.home-btn{
+    height: 46px;
+    width: 122px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    margin-top: 2rem;
+    margin-left: 9rem;
+    color: white;
+    animation: changebg 4s linear infinite;
+    cursor: pointer;
+}
+.home-btn:hover{
+    color: black;
+}
+@keyframes changebg {
+    0%{
+        background-color: #cfae7a;
+    }
+    25%{
+        background-color: #b57612;
+    }
+    50%{
+        background-color: #cfae7a;
+    }
+    75%{
+        background-color: #009688;
+    }
+    100%{
+        background-color: #cfae7a;
+    }
+}
+.home-btn:hover{
+    color: black;
+}
+/* about page styling */
+.about{
+   height: 490px; 
+   width: 100%;
+   display: flex;
+}
+.about-img{
+    height: 460px;
+    width: 520px;
+    padding-left: 45px;
+}
+.about-main{
+    font-size: 1rem;
+    color: #9f9999;
+    font-family: 'PT Sans', sans-serif;
+    margin: 40px 55px 0px;
+    letter-spacing: 6px;
+}
+.about-name{
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 4px;
+    font-size: 3.6rem;
+    margin: 5px 55px 44px;
+}
+.about-para{
+    width: 80%;
+    margin: 2px 55px;
+    font-family: sans-serif;
+    color: #a7a3a3;
+}
+
+/* gallery page syling */
+.gallery{
+    height: 500px;
+    width: 100%;
+    background: #c3c3c3;
+    margin-bottom: 40px;
+    display:flex;
+}
+.gallery-text{
+    margin-top: 130px;
+    margin-left: 68px
+}
+.gallery-para{
+    width: 73%;
+    margin-top: 40px;
+    margin-left: 68px;
+}
+.gallery-btn{
+    height: 44px;
+    width: 126px;
+    margin-top: 40px;
+    margin-left: 100px;
+    color: white;
+    background: black;
+    border: none;
+    cursor: pointer;
+    font-family:'Work Sans', sans-serif;
+    transition: 0.4s ease;
+}
+.row{
+    display: flex;
+    transition:0.3s ease;
+}
+.row a{
+    font-size: 1.1rem;
+    color: black;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 550;
+}
+.posters{
+    height: 213x;
+    width: 285px;
+    margin-top: 182px;
+    margin-left: 62px;
+    margin-right: 12px;
+    border: 5px solid black;
+}
+.religious-art{
+    height: 317px;
+    width: 228px;
+    margin-top: -34px;
+    margin-left: 20px;
+    border: 5px solid black;
+}
+.shadow-art{
+    height: 217px;
+    width: 224px;
+    border: 5px solid black;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.ramayana-art{
+    height: 201px;
+    width: 235px;
+    margin-top: 100px;
+    margin-left: -25px;
+    border: 5px solid black;
+}
+.sketch{
+    height: 227px;
+    width: 219px;
+    margin-left: -23px;
+    margin-top: 20px;
+    border: 5px solid black;
+}
+.posters-text{
+    margin-left: 165px;
+}
+.religious-text{
+    padding-left: 76px
+}
+.shadow-text{
+    display: inherit;
+    margin-left: 86px;
+}
+.ramayana-text{
+    padding-left: 30px;
+}
+.sketch-text{
+    padding-top: 3px;
+    display: inherit;
+    padding-left: 32px;
+}
+ .row a:hover{
+    color: var(--main-color);
+}
+.gallery-btn:hover{
+    color: black;
+    background-color: var(--main-color);
+}
+
+/* gallery-main-page-styling */
+
+.gallery-page-main{
+    height: 571px;
+    width: 100%;
+    background: #c3c3c3;
+}
+.carousel-cell-gallery {
+    width: 560px;
+    height: 465px;
+    margin-right: 10px;
+    border-radius: 5px;
+    counter-increment: gallery-cell;
+    margin-top: 80px;
+}
+.carousel-cell-gallery img{
+    height: 450px;
+    width: 540px;
+    border: 5px solid black;
+}
+.gallery-page-images{
+   height: 3744px;
+   width: 100%;
+   margin: auto;
+   overflow: auto;
+
+}
+.gallery-container{
+    margin-top: 40px;
+    margin-left: 25px;
+    border: 4px solid black;
+    float: left;
+    width: 390px;
+}
+.gallery-container img{
+    width: 100%;
+    height: 350px;
+}
+.image-description{
+    padding: 15px;
+    text-align: center;
+}
+/* exhibitions page styling */
+.exhibition-page-image img{
+    height: 290px;
+    width: 380px;
+    margin-left: 28px;
+    margin-top: 94px;
+    cursor: pointer;
+    border: 4px solid black;
+}
+/* craft page styling */
+.craft-page-images img{
+    height: 290px;
+    width: 380px;
+    margin-left: 28px;
+    margin-top: 94px;
+    cursor: pointer;
+    border: 4px solid black;
+}
+/* gallery posters page styling */
+.posters-page-images{
+    height: 500px;
+    margin-left: 40px;
+}
+.posters-container{
+    margin-top: 60px;
+    margin-left: 8px;
+    border: 4px solid black;
+    float: left;
+    width: 390px;
+}
+.posters-container img {
+    width: 100%;
+    height: 350px;
+}
+.copyright-posters{
+    color: black;
+    text-align: center;
+    margin-top: 30px;
+}
+/* .religious-art page */
+.religious-page-images{
+    height: 1300px;
+    margin-left: 40px;
+}
+.religious-container{
+    margin-top: 60px;
+    margin-left: 8px;
+    border: 4px solid black;
+    float: left;
+    width: 390px;
+}
+.religious-container img {
+    width: 100%;
+    height: 350px;
+}
+.copyright-religious{
+    color: black;
+    text-align: center;
+    margin-top: 30px;
+}
+/* shadow page styling */
+.shadow-page-images{
+    height: 850px;
+    width: 100%;
+}
+.shadow-container{
+    margin-top: 60px;
+    margin-left: 24px;
+    border: 4px solid black;
+    float: left;
+    width: 390px;
+}
+.shadow-container img {
+    width: 100%;
+    height: 350px;
+}
+.copyright-shadow{
+    color: black;
+    text-align: center;
+    margin-top: 30px;
+}
+/* ramayana page styling */
+.ramayana-page-images{
+    height: 850px;
+    width: 100%;
+}
+.ramayana-container{
+    margin-top: 60px;
+    margin-left: 24px;
+    border: 4px solid black;
+    float: left;
+    width: 390px;
+}
+.ramayana-container img {
+    width: 100%;
+    height: 350px;
+}
+.copyright-ramayana{
+    color: black;
+    text-align: center;
+    margin-top: 30px;
+}
+/* sketch page styling */
+.sketch-page-images{
+    height: 2100px;
+    width: 100%;
+}
+.sketch-container{
+    margin-top: 60px;
+    margin-left: 24px;
+    border: 4px solid black;
+    float: left;
+    width: 390px;
+}
+.sketch-container img {
+    width: 100%;
+    height: 350px;
+}
+.copyright-sketch{
+    color: black;
+    text-align: center;
+    margin-top: 30px;
+}
+/* certificates page styling */
+.certificates{
+    height: 580px;
+    width: 100%;
+}
+.certificates-text{
+    margin-top: 96px;
+    text-align: center;
+}
+.carousel-cell {
+    width: 505px;
+    height: 395px;
+    margin-right: 35px;
+}
+.carousel-cell img{
+    height: 385px;
+    width: 500px;
+    border: 5px solid black;
+    border-radius: 5px;
+}
+.certificates-btn{
+    height: 44px;
+    width: 126px;
+    margin-top: 40px;
+    margin-left: 573px;
+    color: white;
+    background: black;
+    border: none;
+    cursor: pointer;
+    font-family:'Work Sans', sans-serif;
+    transition: 0.4s ease;
+}
+.certificates-btn:hover{
+    color: black;
+    background-color: var(--main-color);
+}
+
+/* certificates-main page styling */
+
+.certificates-page-img img{
+    height: 288px;
+    width: 380px;
+    margin-left: 28px;
+    margin-top: 94px;
+    cursor: pointer;
+}
+/* .painting page styling */
+
+.painting{
+    height: 500px;
+    width: 100%;
+    display: flex;
+}
+.bg1{
+    height: 300px;
+    width: 430px;
+    margin-top: 85px;
+}
+.bg2{
+    height: 541px;
+    width: 744px;
+    margin-left: 81px;
+} 
+/* contact page styling */
+/* .contact{
+    height: 470px;
+    width: 100%;
+    margin-top: 65px;
+    background: black;
+}
+.contact-row{
+    display: flex;
+    padding: 30px;
+}
+.contact-para{
+    width: 80%;
+    color: #c3c3c3;
+}
+.box{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.touch{
+    margin-top: 34px;
+    text-align: center;
+    font-size: 1.8rem;
+}
+.gmail{
+    margin-top: 40px;
+    margin-left: 583px
+}
+.insta{
+    margin-left: 40px
+}
+.copyright{
+    text-align: center;
+    margin-top: 70px;
+    color: white;
+}
+h5:hover{
+    color: var(--main-color);
+}
+.envelope{
+    color: var(--main-color);
+}
+.id{
+    color: #c3c3c3;
+    padding-left: 10px;
+    transition: 0.4s ease;
+}
+.id:hover{
+    color: var(--main-color);
+}
+.gmail{
+    color: #0489C9;
+    transition: 0.4s ease;
+}
+.insta{
+    color: #E1306C;
+    transition: 0.4s ease;
+}
+.gmail:hover{
+    color: #046b9b;
+}
+.insta:hover{
+    color: #af0f44;
+} */
+
+#contact{
+    height: 90vh;
+    width: 96rem;
+    background-color: black;
+    color: white;
+    display: flex;
+    margin-top: 50px;
+}
+.contact-left{
+    flex-basis: 35%;
+    margin-left: 45px;
+    font-family:'Work Sans', sans-serif;
+
+}
+.contact-right{
+    flex-basis: 60%;
+    margin-top: 45px;
+}
+.contact-heading{
+    color: white;
+    font-size: 50px;
+    font-weight: 2500;
+    margin-top: 50px;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: tranform 0.5s;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+.cv-btn{
+    height: 40px;
+    width: 110px;
+    color: white;
+    font-size:16px;
+    font-weight: 400;
+    text-align: center;
+    border: 4px solid #ff004f;
+    border-radius: 4px;
+    display: inline-block;
+    background: #ff004f;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.cv-btn:hover{
+    background:black;
+    color: white;
+    border:2px solid #ff004f;
+}
+.contact-rigth form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background-color: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form cv-btn{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 28px;
+    cursor: pointer;
+}
+.footer{
+    height: 35px;
+    width: 90rem;
+    font-family:'Work Sans', sans-serif;
+    background: rgb(120, 117, 117);
+    color: black;
+    padding-top: 10px;
+    text-align: center;
+}

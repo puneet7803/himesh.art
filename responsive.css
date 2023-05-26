@@ -1,0 +1,220 @@
+@media only screen and (max-width:770px){
+    .home{
+        height: 42rem;
+        min-width: 118rem;
+    }
+    .home-text{
+        margin-top: 19rem;
+        margin-left: 14rem;
+    }
+    .home-btn{
+        margin-left: 12rem;
+    }
+    .about{
+        height:52rem;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        margin-top: 2rem;
+        margin-bottom: 5rem;
+    }
+    .about-img{
+        margin-right: -61rem;
+        width: 55rem;
+    }
+    .about-text{
+        text-align: center;
+        margin-right: -63rem;
+    }
+    .about-main{
+        margin-left: 7rem;
+    }
+    .about-para{
+        text-align: center;
+        width: 32rem;
+        margin-left: 37rem;
+    }
+    
+    .gallery{
+        height: 65rem;
+        flex-direction: column;
+        justify-content: space-between;
+        min-width: 118rem;
+    }
+    .gallery-text{
+        text-align: center;
+    }
+    hr{
+        width: 30%;
+        margin: auto;
+    }
+    .gallery-para{
+        text-align: center;
+        width: 110rem;
+    }
+    .gallery-btn{
+        text-align: center;
+        margin-left: 56rem;
+    }
+    .row{
+        margin-top: 4rem;
+    }
+    .posters{
+        height: 21rem;
+        width: 36rem;
+        margin-right: 7rem;
+        margin-left: 6rem;
+    }
+    .posters-text{
+        margin-left: 11rem;
+        padding-left: 9rem;
+    }
+    .religious-art{
+        height: 22rem;
+        width: 27rem;
+        margin-left: -8rem;
+        margin-bottom: 1.5rem;
+    }
+    .religious-text{
+        margin-left: -22rem;
+    }
+    .shadow-art{
+        height: 23rem;
+        width: 27rem;
+        margin-left: -8rem;
+    }
+    .shadow-text{
+        margin-left: 2rem;
+    }
+    .ramayana-art{
+        height: 21rem;
+        width: 26rem;
+        margin-bottom: 1.5rem;
+        margin-right: 17rem;
+        margin-left: 1rem;
+    }
+    .ramayana-text{
+        margin-left: -36rem;
+    }
+    .sketch{
+        height: 20rem;
+        width: 26rem;
+        margin-left: 1rem;
+    }
+    .sketch-text{
+        margin-left: 8rem;
+    }
+
+    .certificates{
+        margin-top: 9rem;
+        min-width: 118rem;
+    }
+    .certificates-btn{
+        margin-left: 55rem;
+    }
+    
+    .painting{
+        flex-direction: column;
+        height: 57rem;
+    }
+    .bg1{
+        width: 116.2rem;
+    }
+    .bg2{
+        margin-top: 2rem;
+        width: 94rem;
+        margin-left: 12rem;
+    }
+    
+     h4{
+        margin: 1rem 1rem;
+    }
+    .gmail{
+        margin-left: 54rem;
+    }
+
+}
+@media only screen and (max-width:412px){
+    .home{
+        width: 115rem;
+        height:38rem;
+    }
+}
+@media only screen and(max-width:444px){
+    .posters{
+        margin-left: 3rem;
+    }
+}
+
+/* tablet styling */
+@media only screen and (max-width:980px){
+    .home{
+        width: 79rem;
+    }
+    .about-img{
+        margin-left: 6rem;
+    }
+    .about-text{
+        margin-left: 2rem;
+    }
+    .gallery{
+        width: 79rem;
+    }
+    .certificates{
+        width: 79rem;
+    }
+
+}
+/* laptop styling */
+/* @media only screen and (max-width:1280px){
+    .home{
+
+    }
+    .about-img{
+
+    }
+    .about-text{
+
+    }
+    .gallery{
+
+    }
+    .certificates{
+
+    }
+    .certificates{
+        
+    }
+} */
+@media only screena and (max-width:600px){
+    .contact{
+        width: 94.8rem;
+        height: 65rem;
+    }
+    .container i,p{
+        font-size: 14px;
+    }
+    .container1{
+        margin: 20px 50px;
+    }
+    .container2{
+        margin-bottom: 20px;
+    }
+    #portfolio{
+        margin-left: 131px;
+    }
+    .p-btn{
+        margin-left: 44px;
+    }
+    .contact-left, .contact-right{
+        margin-left: 95px;
+    }
+    .footer{
+        font-size: 14px;
+        margin-left: 14px;
+        width: 94.8rem;
+    }
+    .religious-page-images{
+        margin-right: 30px;
+    }
+}
